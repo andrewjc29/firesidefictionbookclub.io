@@ -59,6 +59,7 @@ def ensure_cover(book):
 
 def next_block(b):
     return f"""    <p class="date">{esc(b['date'])}</p>
+    <a class="rsvp" href="{esc(b['rsvp'])}">RSVP on Luma &rarr;</a>
     <div class="next-grid">
       <div class="next-cover">
         <img class="cover" src="covers/{b['slug']}.jpg"
@@ -68,8 +69,10 @@ def next_block(b):
         <h3 id="next-title">{esc(b['title'])}</h3>
         <p class="author">by {esc(b['author'])}</p>
         <span class="genre">{esc(b['genre'])}</span>
-        <p class="desc">{esc(b['desc'])}</p>
-        <a class="rsvp" href="{esc(b['rsvp'])}">RSVP on Luma &rarr;</a>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">{esc(b['desc'])}</p>
+        </details>
       </div>
     </div>"""
 
@@ -84,7 +87,10 @@ def past_block(b):
         <h3>{esc(b['title'])}</h3>
         <p class="author">by {esc(b['author'])}</p>
         <span class="genre">{esc(b['genre'])}</span>
-        <p class="desc">{esc(b['desc'])}</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">{esc(b['desc'])}</p>
+        </details>
       </div>
     </article>"""
 
@@ -235,13 +241,12 @@ PAGE = """<!DOCTYPE html>
     border-radius:14px 0 0 14px;
   }}
   .next .date{{
-    font-family:'Spectral',serif;
-    font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:2px;
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:700;
     color:var(--rust);
-    font-size:0.82rem;
-    margin:0 0 16px;
+    font-size:clamp(1.3rem,5vw,1.9rem);
+    line-height:1.15;
+    margin:0 0 14px;
   }}
   .next-grid{{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start;justify-content:center;}}
   .next-cover{{flex:0 0 185px;}}
@@ -292,7 +297,7 @@ PAGE = """<!DOCTYPE html>
 
   .rsvp{{
     display:inline-block;
-    margin-top:18px;
+    margin:2px 0 22px;
     background:var(--rust);
     color:#fff;
     font-family:'Fraunces',Georgia,serif;
@@ -306,6 +311,20 @@ PAGE = """<!DOCTYPE html>
     transition:transform .15s ease, background .15s ease;
   }}
   .rsvp:hover,.rsvp:focus{{background:#85391f;color:#fff;transform:translateY(-1px);}}
+
+  /* ---------- Read more toggles ---------- */
+  details.more{{margin-top:10px;}}
+  details.more > summary{{
+    cursor:pointer;
+    width:max-content;
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:600;
+    font-size:0.92rem;
+    color:var(--blue);
+  }}
+  details.more > summary:hover,details.more > summary:focus{{color:var(--blue-bright);}}
+  details.more[open] > summary{{margin-bottom:6px;}}
+  details.more .desc{{margin-top:0;}}
 
   /* ---------- Past Reads ---------- */
   .past-list{{margin-top:22px;}}

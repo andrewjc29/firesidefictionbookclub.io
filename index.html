@@ -122,13 +122,12 @@
     border-radius:14px 0 0 14px;
   }
   .next .date{
-    font-family:'Spectral',serif;
-    font-weight:600;
-    text-transform:uppercase;
-    letter-spacing:2px;
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:700;
     color:var(--rust);
-    font-size:0.82rem;
-    margin:0 0 16px;
+    font-size:clamp(1.3rem,5vw,1.9rem);
+    line-height:1.15;
+    margin:0 0 14px;
   }
   .next-grid{display:flex;gap:26px;flex-wrap:wrap;align-items:flex-start;justify-content:center;}
   .next-cover{flex:0 0 185px;}
@@ -179,7 +178,7 @@
 
   .rsvp{
     display:inline-block;
-    margin-top:18px;
+    margin:2px 0 22px;
     background:var(--rust);
     color:#fff;
     font-family:'Fraunces',Georgia,serif;
@@ -193,6 +192,20 @@
     transition:transform .15s ease, background .15s ease;
   }
   .rsvp:hover,.rsvp:focus{background:#85391f;color:#fff;transform:translateY(-1px);}
+
+  /* ---------- Read more toggles ---------- */
+  details.more{margin-top:10px;}
+  details.more > summary{
+    cursor:pointer;
+    width:max-content;
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:600;
+    font-size:0.92rem;
+    color:var(--blue);
+  }
+  details.more > summary:hover,details.more > summary:focus{color:var(--blue-bright);}
+  details.more[open] > summary{margin-bottom:6px;}
+  details.more .desc{margin-top:0;}
 
   /* ---------- Past Reads ---------- */
   .past-list{margin-top:22px;}
@@ -303,6 +316,7 @@
   <h2 class="section-title">Next Read</h2>
   <section class="next" aria-labelledby="next-title">
     <p class="date">Tuesday, July 21, 2026 · 6:30–8:00 PM</p>
+    <a class="rsvp" href="https://luma.com/4wp4pz3u">RSVP on Luma &rarr;</a>
     <div class="next-grid">
       <div class="next-cover">
         <img class="cover" src="covers/john-of-john.jpg"
@@ -312,8 +326,10 @@
         <h3 id="next-title">John of John</h3>
         <p class="author">by Douglas Stuart</p>
         <span class="genre">Literary Fiction</span>
-        <p class="desc">John Macausland has spent his life in the shadow of the father he was named for, a revered figure in their fading Glasgow shipyard town. When his father dies, John inherits the name, the debts, and a community that expects him to become a man he never chose to be. Douglas Stuart returns to the tenderness of his Booker-winning fiction with a story about inheritance, masculinity, and the slow work of becoming your own person.</p>
-        <a class="rsvp" href="https://luma.com/4wp4pz3u">RSVP on Luma &rarr;</a>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">John Macausland has spent his life in the shadow of the father he was named for, a revered figure in their fading Glasgow shipyard town. When his father dies, John inherits the name, the debts, and a community that expects him to become a man he never chose to be. Douglas Stuart returns to the tenderness of his Booker-winning fiction with a story about inheritance, masculinity, and the slow work of becoming your own person.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -325,14 +341,17 @@
     <article class="book">
       <div class="book-cover">
         <img class="cover" src="covers/yesteryear.jpg" loading="lazy"
-             alt="Cover of Yesteryear by Douglas Stuart">
+             alt="Cover of Yesteryear by Caro Claire Burke">
       </div>
       <div class="book-body">
         <p class="month">June 2026</p>
         <h3>Yesteryear</h3>
-        <p class="author">by Douglas Stuart</p>
-        <span class="genre">Literary Fiction</span>
-        <p class="desc">John Macausland has spent his life in the shadow of the father he was named for, a revered figure in their fading Glasgow shipyard town. When his father dies, John inherits the name, the debts, and a community that expects him to become a man he never chose to be. Douglas Stuart returns to the tenderness of his Booker-winning fiction with a story about inheritance, masculinity, and the slow work of becoming your own person.</p>
+        <p class="author">by Caro Claire Burke</p>
+        <span class="genre">Satire / Thriller</span>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">Natalie Heller Mills is a tradwife influencer with 8 million followers, a farmhouse in Idaho, and a carefully curated life built on the performance of perfection. Then one morning she wakes up in 1855 and has to survive the actual life she's been selling. A darkly funny debut that blends satire and psychological thriller to examine faith, fame, and the grand performance of womanhood.</p>
+        </details>
       </div>
     </article>
 
@@ -346,7 +365,10 @@
         <h3>The Will of the Many</h3>
         <p class="author">by James Islington</p>
         <span class="genre">Epic Fantasy / Dark Academia</span>
-        <p class="desc">In a society modeled on the Roman Republic, power is hoarded by draining the will of those below. Vis Telimus is an ousted prince hiding in plain sight at an elite academy, tasked with uncovering its buried secrets. A sprawling dark academia epic with political intrigue, a clever magic system, and a gut-punch ending. Fans of Pierce Brown's Red Rising will find much to love here.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">In a society modeled on the Roman Republic, power is hoarded by draining the will of those below. Vis Telimus is an ousted prince hiding in plain sight at an elite academy, tasked with uncovering its buried secrets. A sprawling dark academia epic with political intrigue, a clever magic system, and a gut-punch ending. Fans of Pierce Brown's Red Rising will find much to love here.</p>
+        </details>
       </div>
     </article>
 
@@ -360,7 +382,10 @@
         <h3>Dungeon Crawler Carl</h3>
         <p class="author">by Matt Dinniman</p>
         <span class="genre">LitRPG / Science Fantasy</span>
-        <p class="desc">Earth has been strip-mined by aliens and turned into a dungeon crawl broadcast as entertainment across the galaxy. Carl, a former Coast Guard member, and Princess Donut, his ex-girlfriend's cat, are among the few survivors forced to compete. Equal parts brutal survival horror and absurdist comedy, with an unlikely duo at the center who carry the whole thing on their backs.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">Earth has been strip-mined by aliens and turned into a dungeon crawl broadcast as entertainment across the galaxy. Carl, a former Coast Guard member, and Princess Donut, his ex-girlfriend's cat, are among the few survivors forced to compete. Equal parts brutal survival horror and absurdist comedy, with an unlikely duo at the center who carry the whole thing on their backs.</p>
+        </details>
       </div>
     </article>
 
@@ -374,7 +399,10 @@
         <h3>The Peach Rebellion</h3>
         <p class="author">by Wendelin Van Draanen</p>
         <span class="genre">Historical Fiction</span>
-        <p class="desc">Set in 1940s California, three teenage girls from vastly different backgrounds — an Okie survivor of the Dust Bowl, a rancher's daughter, and a Mexican-American farmworker — come together on a peach orchard and forge an unlikely bond. A warm, character-driven story about bridging differences, sisterhood, and the quiet power of showing up for each other.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">Set in 1940s California, three teenage girls from vastly different backgrounds — an Okie survivor of the Dust Bowl, a rancher's daughter, and a Mexican-American farmworker — come together on a peach orchard and forge an unlikely bond. A warm, character-driven story about bridging differences, sisterhood, and the quiet power of showing up for each other.</p>
+        </details>
       </div>
     </article>
 
@@ -388,7 +416,10 @@
         <h3>The Correspondent</h3>
         <p class="author">by Virginia Evans</p>
         <span class="genre">Epistolary / Literary Fiction</span>
-        <p class="desc">Told entirely through letters and emails spanning 2012 to 2022, the novel follows Sybil Van Antwerp — a retired lawyer in Annapolis, gradually losing her sight, carrying the weight of a dead child and an unresolved adoption. She writes to family, colleagues, and authors like Joan Didion and Ann Patchett. A slow-burn debut inspired by Stoner and 84 Charing Cross Road that quietly became a bestseller.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">Told entirely through letters and emails spanning 2012 to 2022, the novel follows Sybil Van Antwerp — a retired lawyer in Annapolis, gradually losing her sight, carrying the weight of a dead child and an unresolved adoption. She writes to family, colleagues, and authors like Joan Didion and Ann Patchett. A slow-burn debut inspired by Stoner and 84 Charing Cross Road that quietly became a bestseller.</p>
+        </details>
       </div>
     </article>
 
@@ -402,7 +433,10 @@
         <h3>The Emperor's Soul</h3>
         <p class="author">by Brandon Sanderson</p>
         <span class="genre">Fantasy / Novella</span>
-        <p class="desc">Shai is a Forger — a magical thief capable of rewriting the history of objects to alter their present reality. Caught breaking into the palace, she faces execution unless she can do the impossible: forge a new soul for the emperor, who lies brain-dead after an assassination attempt, in 100 days. A tight, meditative novella about art, identity, and what it means to truly know a person. Hugo Award winner.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">Shai is a Forger — a magical thief capable of rewriting the history of objects to alter their present reality. Caught breaking into the palace, she faces execution unless she can do the impossible: forge a new soul for the emperor, who lies brain-dead after an assassination attempt, in 100 days. A tight, meditative novella about art, identity, and what it means to truly know a person. Hugo Award winner.</p>
+        </details>
       </div>
     </article>
 
@@ -416,7 +450,10 @@
         <h3>Martyr!</h3>
         <p class="author">by Kaveh Akbar</p>
         <span class="genre">Literary Fiction</span>
-        <p class="desc">Cyrus Shams is a queer Iranian-American poet, drunk, and addict, obsessed with martyrdom and the mysteries surrounding his mother's death — her plane was shot down over the Persian Gulf when he was a baby. A visit to a dying artist in a Brooklyn gallery sends him searching through his inheritance of violence and loss. Poet Akbar's debut novel is funny, devastating, and unlike anything else.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">Cyrus Shams is a queer Iranian-American poet, drunk, and addict, obsessed with martyrdom and the mysteries surrounding his mother's death — her plane was shot down over the Persian Gulf when he was a baby. A visit to a dying artist in a Brooklyn gallery sends him searching through his inheritance of violence and loss. Poet Akbar's debut novel is funny, devastating, and unlike anything else.</p>
+        </details>
       </div>
     </article>
 
@@ -430,7 +467,10 @@
         <h3>The Buffalo Hunter Hunter</h3>
         <p class="author">by Stephen Graham Jones</p>
         <span class="genre">Historical Horror</span>
-        <p class="desc">In 2012, a manuscript is discovered in a Montana parsonage. Inside, a Lutheran pastor documents a series of confessional visits from a Blackfeet man named Good Stab, who is not seeking absolution. He is telling the story of his long, vampiric life — and the massacre that made him. A horror masterpiece rooted in real history, told in nested voices across centuries. An Obama Summer Read.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">In 2012, a manuscript is discovered in a Montana parsonage. Inside, a Lutheran pastor documents a series of confessional visits from a Blackfeet man named Good Stab, who is not seeking absolution. He is telling the story of his long, vampiric life — and the massacre that made him. A horror masterpiece rooted in real history, told in nested voices across centuries. An Obama Summer Read.</p>
+        </details>
       </div>
     </article>
 
@@ -444,7 +484,10 @@
         <h3>Commonwealth</h3>
         <p class="author">by Ann Patchett</p>
         <span class="genre">Literary Fiction</span>
-        <p class="desc">One impulsive kiss at a christening party leads to an affair that dismantles two marriages and creates a reluctantly blended family of six children. Told across fifty years in vivid vignettes, Commonwealth follows those children — how their shared and separate lives intersect, diverge, and quietly define who they become. Patchett at her most personal and precise.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">One impulsive kiss at a christening party leads to an affair that dismantles two marriages and creates a reluctantly blended family of six children. Told across fifty years in vivid vignettes, Commonwealth follows those children — how their shared and separate lives intersect, diverge, and quietly define who they become. Patchett at her most personal and precise.</p>
+        </details>
       </div>
     </article>
 
@@ -458,7 +501,10 @@
         <h3>The Vegetarian</h3>
         <p class="author">by Han Kang</p>
         <span class="genre">Literary Fiction / Psychological</span>
-        <p class="desc">After a disturbing dream, Yeong-hye — an otherwise unremarkable Korean housewife — stops eating meat and refuses to explain why. What follows is a spiral told through the eyes of three people around her: her controlling husband, her obsessive brother-in-law, and her protective sister. Quiet, unsettling, and deeply strange. International Booker Prize winner from the Nobel laureate.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">After a disturbing dream, Yeong-hye — an otherwise unremarkable Korean housewife — stops eating meat and refuses to explain why. What follows is a spiral told through the eyes of three people around her: her controlling husband, her obsessive brother-in-law, and her protective sister. Quiet, unsettling, and deeply strange. International Booker Prize winner from the Nobel laureate.</p>
+        </details>
       </div>
     </article>
 
@@ -472,7 +518,10 @@
         <h3>Lincoln in the Bardo</h3>
         <p class="author">by George Saunders</p>
         <span class="genre">Historical Fiction / Experimental</span>
-        <p class="desc">One night in February 1862, President Lincoln visits the crypt where his 11-year-old son Willie has just been buried. Around him, a chorus of ghosts — trapped in the bardo, the Tibetan Buddhist realm between death and rebirth — bear witness. Assembled from fragments of historical documents and invented voices, Saunders' debut novel is a grief-soaked fever dream that won the Man Booker Prize.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">One night in February 1862, President Lincoln visits the crypt where his 11-year-old son Willie has just been buried. Around him, a chorus of ghosts — trapped in the bardo, the Tibetan Buddhist realm between death and rebirth — bear witness. Assembled from fragments of historical documents and invented voices, Saunders' debut novel is a grief-soaked fever dream that won the Man Booker Prize.</p>
+        </details>
       </div>
     </article>
 
@@ -486,7 +535,10 @@
         <h3>Project Hail Mary</h3>
         <p class="author">by Andy Weir</p>
         <span class="genre">Hard Science Fiction</span>
-        <p class="desc">Ryland Grace wakes up alone on a spacecraft with no memory of who he is or how he got there. As it slowly comes back to him — he's on a one-man mission to save Earth from an extinction-level threat — he realizes he may already be too late. Then he finds he's not alone. One of the most joyful, propulsive sci-fi novels in years. Hugo Award finalist, now a major film.</p>
+        <details class="more">
+          <summary>Read more</summary>
+          <p class="desc">Ryland Grace wakes up alone on a spacecraft with no memory of who he is or how he got there. As it slowly comes back to him — he's on a one-man mission to save Earth from an extinction-level threat — he realizes he may already be too late. Then he finds he's not alone. One of the most joyful, propulsive sci-fi novels in years. Hugo Award finalist, now a major film.</p>
+        </details>
       </div>
     </article>
 
