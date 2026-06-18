@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kevin's Fireside Fiction Bookclub reading list. We meet the 3rd Tuesday of every month at Fireside Books & More in Redwood City, CA. All readers welcome.">
+<meta name="theme-color" content="#1d2a4f">
+<meta property="og:title" content="Kevin's Fireside Fiction Bookclub">
+<meta property="og:description" content="No genre is off limits. If it's fiction, it's fair game. All readers welcome.">
+<meta property="og:type" content="website">
+<title>Kevin's Fireside Fiction Bookclub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1d2a4f;
+    --navy-soft:#3a4a73;
+    --cream:#f7efdd;
+    --cream-card:#fcf7ea;
+    --line:#e2d6b8;
+    --accent:#9c3b2e;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--navy);
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:17px;
+    line-height:1.6;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+  a{color:var(--accent);}
+  a:hover,a:focus{text-decoration:underline;}
+
+  header.site{
+    text-align:center;
+    padding:42px 20px 30px;
+    border-bottom:3px double var(--navy);
+  }
+  header.site h1{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    font-weight:400;
+    margin:0;
+    line-height:0.95;
+    letter-spacing:1.5px;
+    font-size:clamp(2.6rem,9vw,4.4rem);
+  }
+  header.site h1.brand{margin:0;line-height:0;}
+  header.site h1.brand img{
+    display:block;
+    width:100%;
+    max-width:420px;
+    height:auto;
+    margin:0 auto;
+  }
+  .tagline{
+    font-style:italic;
+    margin:14px auto 0;
+    max-width:32em;
+    color:var(--navy-soft);
+  }
+  .meet{
+    margin-top:18px;
+    font-size:0.95rem;
+    line-height:1.7;
+  }
+  .meet strong{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    letter-spacing:1px;
+    font-weight:400;
+    font-size:1.05rem;
+  }
+
+  .section-title{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    font-weight:400;
+    letter-spacing:2px;
+    font-size:1.9rem;
+    margin:44px 0 4px;
+    padding-bottom:6px;
+    border-bottom:2px solid var(--navy);
+  }
+
+  .next{
+    background:var(--cream-card);
+    border:1px solid var(--line);
+    border-top:6px solid var(--navy);
+    border-radius:10px;
+    padding:22px;
+    margin-top:16px;
+    box-shadow:0 2px 10px rgba(29,42,79,0.06);
+  }
+  .next .date{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    letter-spacing:1.5px;
+    font-size:1.25rem;
+    margin:0 0 14px;
+  }
+  .next-grid{display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start;justify-content:center;}
+  .next-cover{flex:0 0 175px;}
+  .next-body{flex:1 1 260px;min-width:230px;}
+  .next-body h3{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    font-weight:400;
+    letter-spacing:1px;
+    font-size:2rem;
+    line-height:1;
+    margin:0 0 4px;
+  }
+  .author{font-style:italic;margin:0 0 6px;color:var(--navy-soft);}
+  .genre{
+    display:inline-block;
+    font-family:'Bebas Neue',Impact,sans-serif;
+    letter-spacing:1.5px;
+    font-size:0.85rem;
+    background:var(--navy);
+    color:var(--cream);
+    padding:3px 10px;
+    border-radius:3px;
+    margin-bottom:10px;
+  }
+  .desc{margin:8px 0 0;font-size:0.98rem;}
+
+  .cover{
+    display:block;
+    width:100%;
+    aspect-ratio:2/3;
+    object-fit:cover;
+    border-radius:6px;
+    background:var(--line);
+    box-shadow:0 3px 8px rgba(29,42,79,0.18);
+  }
+
+  .rsvp{
+    display:inline-block;
+    margin-top:16px;
+    background:var(--accent);
+    color:#fff;
+    font-family:'Bebas Neue',Impact,sans-serif;
+    letter-spacing:1.5px;
+    font-size:1.25rem;
+    text-decoration:none;
+    padding:11px 30px;
+    border-radius:6px;
+  }
+  .rsvp:hover,.rsvp:focus{background:#822f25;text-decoration:none;}
+
+  .past-list{margin-top:18px;}
+  .book{
+    display:flex;
+    gap:18px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .book .month{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    letter-spacing:1px;
+    font-size:0.8rem;
+    color:var(--navy-soft);
+    margin:0 0 3px;
+  }
+  .book-cover{flex:0 0 92px;}
+  .book-body{flex:1;min-width:0;}
+  .book-body h3{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    font-weight:400;
+    letter-spacing:0.5px;
+    font-size:1.4rem;
+    line-height:1.05;
+    margin:0 0 2px;
+  }
+  .book-body .author{font-size:0.92rem;margin-bottom:6px;}
+  .book-body .genre{font-size:0.72rem;padding:2px 8px;margin-bottom:8px;}
+  .book-body .desc{font-size:0.92rem;}
+
+  footer.site{
+    margin-top:46px;
+    padding:30px 20px 50px;
+    border-top:3px double var(--navy);
+    text-align:center;
+  }
+  .links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:20px;
+  }
+  .links a{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    letter-spacing:1.5px;
+    font-size:1.1rem;
+    text-decoration:none;
+    color:var(--cream);
+    background:var(--navy);
+    padding:9px 22px;
+    border-radius:6px;
+  }
+  .links a:hover,.links a:focus{background:var(--navy-soft);text-decoration:none;}
+  .footer-note{
+    font-size:0.85rem;
+    color:var(--navy-soft);
+    line-height:1.7;
+  }
+  .footer-note strong{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    letter-spacing:1px;
+    font-weight:400;
+  }
+
+  @media (max-width:480px){
+    .next-cover{flex-basis:160px;}
+    .book-cover{flex-basis:80px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <h1 class="brand"><img src="logo.png" alt="Kevin's Fireside Fiction Bookclub"></h1>
+    <p class="tagline">No genre is off limits. If it's fiction, it's fair game. All readers welcome.</p>
+    <p class="meet">
+      <strong>When:</strong> 3rd Tuesday of every month, 6:30&ndash;8:00&nbsp;PM<br>
+      <strong>Where:</strong> <a href="https://maps.app.goo.gl/Khheeku36uL8h1kXA">Fireside Books &amp; More</a>, 2421 Broadway, Redwood City, CA&nbsp;94063
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- NEXT READ  (generated from books.json -> "next") -->
+  <h2 class="section-title">Next Read</h2>
+  <section class="next" aria-labelledby="next-title">
+    <p class="date">Tuesday, July 21, 2026 · 6:30–8:00 PM</p>
+    <div class="next-grid">
+      <div class="next-cover">
+        <img class="cover" src="covers/john-of-john.jpg"
+             alt="Cover of John of John by Douglas Stuart" fetchpriority="high">
+      </div>
+      <div class="next-body">
+        <h3 id="next-title">John of John</h3>
+        <p class="author">by Douglas Stuart</p>
+        <span class="genre">Literary Fiction</span>
+        <p class="desc">John Macausland has spent his life in the shadow of the father he was named for, a revered figure in their fading Glasgow shipyard town. When his father dies, John inherits the name, the debts, and a community that expects him to become a man he never chose to be. Douglas Stuart returns to the tenderness of his Booker-winning fiction with a story about inheritance, masculinity, and the slow work of becoming your own person.</p>
+        <a class="rsvp" href="https://luma.com/4wp4pz3u">RSVP on Luma</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAST READS  (generated from books.json -> "past", newest first) -->
+  <h2 class="section-title">Past Reads</h2>
+  <div class="past-list">
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/yesteryear.jpg" loading="lazy"
+             alt="Cover of Yesteryear by Douglas Stuart">
+      </div>
+      <div class="book-body">
+        <p class="month">June 2026</p>
+        <h3>Yesteryear</h3>
+        <p class="author">by Douglas Stuart</p>
+        <span class="genre">Literary Fiction</span>
+        <p class="desc">John Macausland has spent his life in the shadow of the father he was named for, a revered figure in their fading Glasgow shipyard town. When his father dies, John inherits the name, the debts, and a community that expects him to become a man he never chose to be. Douglas Stuart returns to the tenderness of his Booker-winning fiction with a story about inheritance, masculinity, and the slow work of becoming your own person.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/the-will-of-the-many.jpg" loading="lazy"
+             alt="Cover of The Will of the Many by James Islington">
+      </div>
+      <div class="book-body">
+        <p class="month">May 2026</p>
+        <h3>The Will of the Many</h3>
+        <p class="author">by James Islington</p>
+        <span class="genre">Epic Fantasy / Dark Academia</span>
+        <p class="desc">In a society modeled on the Roman Republic, power is hoarded by draining the will of those below. Vis Telimus is an ousted prince hiding in plain sight at an elite academy, tasked with uncovering its buried secrets. A sprawling dark academia epic with political intrigue, a clever magic system, and a gut-punch ending. Fans of Pierce Brown's Red Rising will find much to love here.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/dungeon-crawler-carl.jpg" loading="lazy"
+             alt="Cover of Dungeon Crawler Carl by Matt Dinniman">
+      </div>
+      <div class="book-body">
+        <p class="month">April 2026</p>
+        <h3>Dungeon Crawler Carl</h3>
+        <p class="author">by Matt Dinniman</p>
+        <span class="genre">LitRPG / Science Fantasy</span>
+        <p class="desc">Earth has been strip-mined by aliens and turned into a dungeon crawl broadcast as entertainment across the galaxy. Carl, a former Coast Guard member, and Princess Donut, his ex-girlfriend's cat, are among the few survivors forced to compete. Equal parts brutal survival horror and absurdist comedy, with an unlikely duo at the center who carry the whole thing on their backs.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/the-peach-rebellion.jpg" loading="lazy"
+             alt="Cover of The Peach Rebellion by Wendelin Van Draanen">
+      </div>
+      <div class="book-body">
+        <p class="month">March 2026</p>
+        <h3>The Peach Rebellion</h3>
+        <p class="author">by Wendelin Van Draanen</p>
+        <span class="genre">Historical Fiction</span>
+        <p class="desc">Set in 1940s California, three teenage girls from vastly different backgrounds — an Okie survivor of the Dust Bowl, a rancher's daughter, and a Mexican-American farmworker — come together on a peach orchard and forge an unlikely bond. A warm, character-driven story about bridging differences, sisterhood, and the quiet power of showing up for each other.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/the-correspondent.jpg" loading="lazy"
+             alt="Cover of The Correspondent by Virginia Evans">
+      </div>
+      <div class="book-body">
+        <p class="month">February 2026</p>
+        <h3>The Correspondent</h3>
+        <p class="author">by Virginia Evans</p>
+        <span class="genre">Epistolary / Literary Fiction</span>
+        <p class="desc">Told entirely through letters and emails spanning 2012 to 2022, the novel follows Sybil Van Antwerp — a retired lawyer in Annapolis, gradually losing her sight, carrying the weight of a dead child and an unresolved adoption. She writes to family, colleagues, and authors like Joan Didion and Ann Patchett. A slow-burn debut inspired by Stoner and 84 Charing Cross Road that quietly became a bestseller.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/the-emperors-soul.jpg" loading="lazy"
+             alt="Cover of The Emperor's Soul by Brandon Sanderson">
+      </div>
+      <div class="book-body">
+        <p class="month">January 2026</p>
+        <h3>The Emperor's Soul</h3>
+        <p class="author">by Brandon Sanderson</p>
+        <span class="genre">Fantasy / Novella</span>
+        <p class="desc">Shai is a Forger — a magical thief capable of rewriting the history of objects to alter their present reality. Caught breaking into the palace, she faces execution unless she can do the impossible: forge a new soul for the emperor, who lies brain-dead after an assassination attempt, in 100 days. A tight, meditative novella about art, identity, and what it means to truly know a person. Hugo Award winner.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/martyr.jpg" loading="lazy"
+             alt="Cover of Martyr! by Kaveh Akbar">
+      </div>
+      <div class="book-body">
+        <p class="month">November 2025</p>
+        <h3>Martyr!</h3>
+        <p class="author">by Kaveh Akbar</p>
+        <span class="genre">Literary Fiction</span>
+        <p class="desc">Cyrus Shams is a queer Iranian-American poet, drunk, and addict, obsessed with martyrdom and the mysteries surrounding his mother's death — her plane was shot down over the Persian Gulf when he was a baby. A visit to a dying artist in a Brooklyn gallery sends him searching through his inheritance of violence and loss. Poet Akbar's debut novel is funny, devastating, and unlike anything else.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/the-buffalo-hunter-hunter.jpg" loading="lazy"
+             alt="Cover of The Buffalo Hunter Hunter by Stephen Graham Jones">
+      </div>
+      <div class="book-body">
+        <p class="month">October 2025</p>
+        <h3>The Buffalo Hunter Hunter</h3>
+        <p class="author">by Stephen Graham Jones</p>
+        <span class="genre">Historical Horror</span>
+        <p class="desc">In 2012, a manuscript is discovered in a Montana parsonage. Inside, a Lutheran pastor documents a series of confessional visits from a Blackfeet man named Good Stab, who is not seeking absolution. He is telling the story of his long, vampiric life — and the massacre that made him. A horror masterpiece rooted in real history, told in nested voices across centuries. An Obama Summer Read.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/commonwealth.jpg" loading="lazy"
+             alt="Cover of Commonwealth by Ann Patchett">
+      </div>
+      <div class="book-body">
+        <p class="month">September 2025</p>
+        <h3>Commonwealth</h3>
+        <p class="author">by Ann Patchett</p>
+        <span class="genre">Literary Fiction</span>
+        <p class="desc">One impulsive kiss at a christening party leads to an affair that dismantles two marriages and creates a reluctantly blended family of six children. Told across fifty years in vivid vignettes, Commonwealth follows those children — how their shared and separate lives intersect, diverge, and quietly define who they become. Patchett at her most personal and precise.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/the-vegetarian.jpg" loading="lazy"
+             alt="Cover of The Vegetarian by Han Kang">
+      </div>
+      <div class="book-body">
+        <p class="month">August 2025</p>
+        <h3>The Vegetarian</h3>
+        <p class="author">by Han Kang</p>
+        <span class="genre">Literary Fiction / Psychological</span>
+        <p class="desc">After a disturbing dream, Yeong-hye — an otherwise unremarkable Korean housewife — stops eating meat and refuses to explain why. What follows is a spiral told through the eyes of three people around her: her controlling husband, her obsessive brother-in-law, and her protective sister. Quiet, unsettling, and deeply strange. International Booker Prize winner from the Nobel laureate.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/lincoln-in-the-bardo.jpg" loading="lazy"
+             alt="Cover of Lincoln in the Bardo by George Saunders">
+      </div>
+      <div class="book-body">
+        <p class="month">July 2025</p>
+        <h3>Lincoln in the Bardo</h3>
+        <p class="author">by George Saunders</p>
+        <span class="genre">Historical Fiction / Experimental</span>
+        <p class="desc">One night in February 1862, President Lincoln visits the crypt where his 11-year-old son Willie has just been buried. Around him, a chorus of ghosts — trapped in the bardo, the Tibetan Buddhist realm between death and rebirth — bear witness. Assembled from fragments of historical documents and invented voices, Saunders' debut novel is a grief-soaked fever dream that won the Man Booker Prize.</p>
+      </div>
+    </article>
+
+    <article class="book">
+      <div class="book-cover">
+        <img class="cover" src="covers/project-hail-mary.jpg" loading="lazy"
+             alt="Cover of Project Hail Mary by Andy Weir">
+      </div>
+      <div class="book-body">
+        <p class="month">June 2025</p>
+        <h3>Project Hail Mary</h3>
+        <p class="author">by Andy Weir</p>
+        <span class="genre">Hard Science Fiction</span>
+        <p class="desc">Ryland Grace wakes up alone on a spacecraft with no memory of who he is or how he got there. As it slowly comes back to him — he's on a one-man mission to save Earth from an extinction-level threat — he realizes he may already be too late. Then he finds he's not alone. One of the most joyful, propulsive sci-fi novels in years. Hugo Award finalist, now a major film.</p>
+      </div>
+    </article>
+
+  </div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <nav class="links" aria-label="Bookclub links">
+      <a href="https://luma.com/4wp4pz3u">RSVP Next Read</a>
+      <a href="https://luma.com/kevinsbookclub">Luma Calendar</a>
+      <a href="https://discord.gg/KWzm3Kh9Sh">Discord</a>
+      <a href="https://linktr.ee/kevinsbookclub">Linktree</a>
+    </nav>
+    <p class="footer-note">
+      <strong>Kevin's Fireside Fiction Bookclub</strong><br>
+      3rd Tuesday Monthly &middot; 6:30&nbsp;PM &middot; Fireside Books &amp; More
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
