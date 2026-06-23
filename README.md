@@ -5,17 +5,19 @@ A single static page (`index.html`) that replaces the Google Doc reading list. N
 ## Files
 
 ```
-index.html        The whole site (HTML + inline CSS) — this is what GitHub Pages serves
-covers/           Portrait book covers, named by slug: covers/[book-slug].jpg
+index.html        Generated output. This is what GitHub Pages serves. Do not hand-edit.
+template.html     The page design (layout, inline CSS, fonts, JS) with %%TOKENS%% for content
 books.json        All book data (the single source of truth for content)
-build.py          Regenerates index.html from books.json and normalizes covers
+build.py          Fills template.html from books.json into index.html, and normalizes covers
+covers/           Portrait book covers, named by slug: covers/[book-slug].jpg
+logo.png          The title logo image. Do not modify, recreate, or recolor it.
 README.md         This file
 ```
 
-`index.html` is generated from `books.json` by `build.py`. You can either edit
-`books.json` and re-run the script (recommended, see "Monthly update"), or hand-edit
-`index.html` directly. Either works; the script just removes the chance of breaking
-the HTML by hand.
+`index.html` is generated from `books.json` and `template.html` by `build.py`.
+Edit `books.json` and re-run the script (see "Monthly update"). Do not hand-edit
+`index.html`: it is overwritten on every build. To change the design (layout,
+colors, fonts, the Stay Connected or footer sections), edit `template.html`.
 
 ## Deploy on GitHub Pages
 
@@ -50,10 +52,16 @@ Take the current `next` object, move it to the **top** of the `past` array. Repl
   "genre": "Literary Fiction",
   "date": "Tuesday, August 18, 2026 · 6:30–8:00 PM",
   "rsvp": "https://luma.com/xxxxxxxx",
-  "desc": "Two to three sentence description.",
+  "desc": "Two to four sentence description.",
   "source_image": "/path/to/the-new-cover.jpg"
 }
 ```
+
+The `date` field is split on the middle dot (`·`): the part before it becomes the
+date line in the hero, the part after becomes the time line. Keep that dot between
+the date and the time. The hero shows `genre` and `desc` inside the "View details"
+toggle; the same `desc` appears in the Past Reads pop-up after the book rolls into
+`past`, so write it as a full two-to-four sentence blurb.
 
 `source_image` is the new cover anywhere on disk (jpg/png/jpeg). The script resizes it
 to 600px wide and saves it as `covers/<slug>.jpg` for you. The slug is derived from the
@@ -81,21 +89,22 @@ GitHub Pages redeploys in about a minute. The bit.ly and Linktree links never ch
 
 > One-time setup for the script: `pip install Pillow` (only needed for cover resizing).
 
-### Alternative: hand-edit `index.html`
+### Do not hand-edit `index.html`
 
-If you'd rather not run the script, edit `index.html` directly. Copy the current Next Read
-`<section class="next">` content into a new `<article class="book">` at the top of
-`.past-list`, then update the Next Read fields. Add the new cover to `covers/` as
-`covers/<slug>.jpg` yourself.
+`index.html` is regenerated on every build, so any direct edits are lost. Change content
+in `books.json` and design in `template.html`, then run `build.py`.
 
-## Standard links (in the footer)
+## Standard links (in the Stay Connected section)
 
-- Luma calendar: https://luma.com/kevinsbookclub
 - Discord: https://discord.gg/KWzm3Kh9Sh
+- Luma calendar: https://luma.com/kevinsbookclub
 - Linktree: https://linktr.ee/kevinsbookclub
+
+These three live in the Stay Connected section near the bottom of `template.html`.
 
 ## Notes
 
-- The page uses one web font (Bebas Neue) loaded from Google Fonts. If a reader is offline it falls back to a system condensed font; everything still works.
+- The page uses two web fonts from Google Fonts: Bitter for headings, Spectral for body. Offline, both fall back to Georgia/serif and everything still works.
 - Covers are referenced by relative path, so the site is fully self-contained and portable.
-- Meeting details (3rd Tuesday, 6:30–8:00 PM, Fireside Books & More, 2421 Broadway, Redwood City, CA 94063) live in the header and footer of `index.html` if you ever need to change them.
+- Meeting date and time come from `books.json` (`next.date`). The location link, the meeting schedule, and the footer text live in `template.html`.
+- The Past Reads pop-up and the hero "View details" toggle are powered by a small inline script at the bottom of `template.html`. No framework, no dependencies.

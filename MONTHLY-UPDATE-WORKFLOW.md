@@ -4,11 +4,11 @@
 - Repo: https://github.com/andrewjc29/firesidefictionbookclub.io
 - bit.ly and Linktree point here. Never change those.
 
-You edit one file (`books.json`), run one script (`build.py`), publish two files.
+You edit one file (`books.json`), run one script (`build.py`), publish the changed files (`index.html` and the new cover). The page design lives in `template.html` and only changes when you redesign the site, not monthly.
 
 ## Where the files live
 
-The GitHub repo is the source of truth. `build.py`, `books.json`, and `covers/` sit together in the repo root, and `build.py` finds `books.json` and `covers/` automatically because it looks in its own folder. The only path you supply is the new cover's `source_image`.
+The GitHub repo is the source of truth. `build.py`, `books.json`, `template.html`, and `covers/` sit together in the repo root, and `build.py` finds them automatically because it looks in its own folder. The only path you supply is the new cover's `source_image`. `index.html` is generated, so never hand-edit it; edit `books.json` (content) or `template.html` (design) and rebuild.
 
 Before editing, pull the current files from the repo so you never work from a stale copy. Edit in one place only.
 
@@ -27,6 +27,8 @@ Before editing, pull the current files from the repo so you never work from a st
      "source_image": "/full/path/to/new-cover.jpg"
    }
    ```
+
+   Keep the middle dot (`·`) in `date` between the date and the time: the hero splits on it to show a date line and a time line. Write `desc` as a full two-to-four sentence blurb. It shows in the hero "View details" toggle this month and in the Past Reads pop-up after the book rolls into `past`.
 
    `source_image` is the cover anywhere on your Mac. The script resizes it and saves `covers/<slug>.jpg`. First run only: `pip install Pillow`.
 
