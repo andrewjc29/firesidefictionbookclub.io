@@ -1,13 +1,20 @@
 {
   "next": {
-    "title": "John of John",
-    "author": "Douglas Stuart",
-    "genre": "Literary Fiction",
-    "date": "Tuesday, July 21, 2026 · 6:30–8:00 PM",
-    "rsvp": "https://luma.com/4wp4pz3u",
-    "desc": "John Macausland has spent his life in the shadow of the father he was named for, a revered figure in their fading Glasgow shipyard town. When his father dies, John inherits the name, the debts, and a community that expects him to become a man he never chose to be. Douglas Stuart returns to the tenderness of his Booker-winning fiction with a story about inheritance, masculinity, and the slow work of becoming your own person."
+    "title": "Hell's Heart",
+    "author": "Alexis Hall",
+    "genre": "Science Fiction",
+    "date": "Tuesday, August 18, 2026 · 6:30–8:00 PM",
+    "rsvp": "https://luma.com/ueczp8z8",
+    "desc": "Earth is dead, and what's left of humanity survives in domed colonies fueled by the cerebrospinal fluid of gargantuan, half-psychic space monsters. The narrator signs on with a hunting crew and follows a captain obsessed with killing the greatest of these beasts, the legendary Mobius Beast, through the storms of Jupiter. Alexis Hall's science fiction debut turns Moby-Dick into a queer, blood-and-guts space adventure. An instant USA Today bestseller, pitched as Gideon the Ninth meets Moby-Dick."
   },
   "past": [
+    {
+      "month": "July 2026",
+      "title": "John of John",
+      "author": "Douglas Stuart",
+      "genre": "Literary Fiction",
+      "desc": "John Macausland has spent his life in the shadow of the father he was named for, a revered figure in their fading Glasgow shipyard town. When his father dies, John inherits the name, the debts, and a community that expects him to become a man he never chose to be. Douglas Stuart returns to the tenderness of his Booker-winning fiction with a story about inheritance, masculinity, and the slow work of becoming your own person."
+    },
     {
       "month": "June 2026",
       "title": "Yesteryear",
