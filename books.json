@@ -1,13 +1,20 @@
 {
   "next": {
-    "title": "Hell's Heart",
-    "author": "Alexis Hall",
-    "genre": "Science Fiction",
-    "date": "Tuesday, August 18, 2026 · 6:30–8:00 PM",
-    "rsvp": "https://luma.com/ueczp8z8",
-    "desc": "Earth is dead, and what's left of humanity survives in domed colonies fueled by the cerebrospinal fluid of gargantuan, half-psychic space monsters. The narrator signs on with a hunting crew and follows a captain obsessed with killing the greatest of these beasts, the legendary Mobius Beast, through the storms of Jupiter. Alexis Hall's science fiction debut turns Moby-Dick into a queer, blood-and-guts space adventure. An instant USA Today bestseller, pitched as Gideon the Ninth meets Moby-Dick."
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "genre": "Classic Literature",
+    "date": "Tuesday, September 29, 2026 · 6:30–8:00 PM",
+    "rsvp": "https://luma.com/uwba012x",
+    "desc": "Raskolnikov is a destitute former student living in the slums of St. Petersburg. Convinced that extraordinary men are permitted to break ordinary moral rules, he murders a pawnbroker and, when her sister walks in on him, kills her too. What follows is a slow unraveling: guilt, fever, and a cat-and-mouse game with the detective who suspects him almost from the start, until he confesses to a young woman he comes to love and turns himself in. This edition uses Richard Pevear and Larissa Volokhonsky's translation, revised in 2021 for Dostoevsky's bicentennial."
   },
   "past": [
+    {
+      "month": "August 2026",
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "genre": "Classic Literature",
+      "desc": "Earth is dead, and what's left of humanity survives in domed colonies fueled by the cerebrospinal fluid of gargantuan, half-psychic space monsters. The narrator signs on with a hunting crew and follows a captain obsessed with killing the greatest of these beasts, the legendary Mobius Beast, through the storms of Jupiter. Alexis Hall's science fiction debut turns Moby-Dick into a queer, blood-and-guts space adventure. An instant USA Today bestseller, pitched as Gideon the Ninth meets Moby-Dick."
+    },
     {
       "month": "July 2026",
       "title": "John of John",
