@@ -1,13 +1,20 @@
 {
   "next": {
-    "title": "Crime and Punishment",
-    "author": "Fyodor Dostoevsky",
-    "genre": "Classic Literature",
-    "date": "Tuesday, September 29, 2026 · 6:30–8:00 PM",
-    "rsvp": "https://luma.com/uwba012x",
-    "desc": "Raskolnikov is a destitute former student living in the slums of St. Petersburg. Convinced that extraordinary men are permitted to break ordinary moral rules, he murders a pawnbroker and, when her sister walks in on him, kills her too. What follows is a slow unraveling: guilt, fever, and a cat-and-mouse game with the detective who suspects him almost from the start, until he confesses to a young woman he comes to love and turns himself in. This edition uses Richard Pevear and Larissa Volokhonsky's translation, revised in 2021 for Dostoevsky's bicentennial."
+    "title": "Vampires of El Norte",
+    "author": "Isabel Cañas",
+    "genre": "Horror / Historical Romance",
+    "date": "Tuesday, October 20, 2026 · 6:30–8:00 PM",
+    "rsvp": "https://luma.com/f05umer9",
+    "desc": "Nena, a ranchero's daughter, and Nestor, a vaquero, have been close since childhood despite the gap in their stations. At thirteen they go hunting for buried treasure and run into a vampire instead; Nestor believes Nena died that night and leaves, certain he'll never come back. Nine years on, the Mexican-American War drags him home, where he finds Nena alive and still furious with him for abandoning her. Isabel Canas sets this vampire story against the real violence of the Texas-Mexico border, in the same world as her debut, The Hacienda."
   },
   "past": [
+    {
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "genre": "Classic Literature",
+      "month": "September 2026",
+      "desc": "Raskolnikov is a destitute former student living in the slums of St. Petersburg. Convinced that extraordinary men are permitted to break ordinary moral rules, he murders a pawnbroker and, when her sister walks in on him, kills her too. What follows is a slow unraveling: guilt, fever, and a cat-and-mouse game with the detective who suspects him almost from the start, until he confesses to a young woman he comes to love and turns himself in. This edition uses Richard Pevear and Larissa Volokhonsky's translation, revised in 2021 for Dostoevsky's bicentennial."
+    },
     {
       "month": "August 2026",
       "title": "Crime and Punishment",
